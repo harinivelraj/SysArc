@@ -15,18 +15,18 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/features-page.html"
+      "source": "/",
+      "destination": "/features-page.html"
     },
     {
-      "src": "/features",
-      "dest": "/features-page.html"
+      "source": "/features",
+      "destination": "/features-page.html"
     },
     {
-      "src": "/safe-features",
-      "dest": "/features-page.html"
+      "source": "/safe-features",
+      "destination": "/features-page.html"
     }
   ],
   "headers": [
