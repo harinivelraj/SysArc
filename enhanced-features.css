@@ -1,0 +1,301 @@
+/* Enhanced SAFE Features Section Styles */
+
+/* Reset and base improvements */
+.highlightFeatureSec {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    padding: 100px 0 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlightFeatureSec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a"><stop offset="0" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="1" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><g opacity="0.8"><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="150" fill="url(%23a)"/><circle cx="300" cy="700" r="120" fill="url(%23a)"/><circle cx="700" cy="800" r="80" fill="url(%23a)"/></g></svg>') no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.highlightFeatureSec .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhanced badge styling */
+.highlightFeatureSec .badge.primary-badge {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    border-radius: 50px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    animation: glow 2s ease-in-out infinite alternate;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+    to { box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); }
+}
+
+/* Enhanced title styling */
+.highlightFeatureSec .section-title h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 800 !important;
+    color: white !important;
+    margin-bottom: 30px !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.highlightFeatureSec .section-title h2 span {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.highlightFeatureSec .section-title p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.2rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Enhanced slider layout */
+.highlightFeatureSec .highlightSlider {
+    margin-top: 60px;
+}
+
+.highlightFeatureSec .verticalSliderRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Enhanced product cards */
+.highlightFeatureSec .productCard {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 24px !important;
+    padding: 40px 30px !important;
+    text-align: center !important;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    overflow: hidden;
+    margin-bottom: 30px !important;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out;
+}
+
+.highlightFeatureSec .productCard:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+.highlightFeatureSec .productCard:nth-child(3n) {
+    animation-delay: 0.4s;
+}
+
+/* Shimmer effect */
+.highlightFeatureSec .productCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s;
+    z-index: 1;
+}
+
+.highlightFeatureSec .productCard:hover::before {
+    left: 100%;
+}
+
+.highlightFeatureSec .productCard:hover {
+    transform: translateY(-10px) scale(1.02) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Enhanced icon styling */
+.highlightFeatureSec .productCard .icon {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 30px !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+    transition: all 0.4s ease !important;
+    z-index: 2;
+}
+
+.highlightFeatureSec .productCard:hover .icon {
+    transform: scale(1.1) rotate(5deg) !important;
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%) !important;
+}
+
+.highlightFeatureSec .productCard .icon img {
+    width: 40px !important;
+    height: 40px !important;
+    filter: brightness(0) invert(1);
+    transition: all 0.4s ease !important;
+}
+
+.highlightFeatureSec .productCard:hover .icon img {
+    transform: scale(1.2) !important;
+}
+
+/* Enhanced text styling */
+.highlightFeatureSec .productCard p {
+    color: rgba(255, 255, 255, 0.85) !important;
+    line-height: 1.6 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    font-weight: 500 !important;
+    position: relative;
+    z-index: 2;
+}
+
+.highlightFeatureSec .productCard:hover p {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Floating animation for cards */
+.highlightFeatureSec .productCard {
+    animation: floating 3s ease-in-out infinite, fadeInUp 1s ease-out;
+}
+
+.highlightFeatureSec .lendingFunCardsList:nth-child(2) .productCard {
+    animation-delay: 1.5s;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Remove default scrolling animations */
+.highlightFeatureSec .cards-scroll-up,
+.highlightFeatureSec .cards-scroll-down {
+    animation: none !important;
+}
+
+/* Enhanced feature image */
+.highlightFeatureSec .section-title img {
+    max-width: 400px !important;
+    width: 100% !important;
+    height: auto !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 0.8 !important;
+    transition: all 0.4s ease !important;
+}
+
+.highlightFeatureSec .section-title img:hover {
+    opacity: 1 !important;
+    transform: scale(1.05) !important;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+    .highlightFeatureSec {
+        padding: 60px 0 !important;
+    }
+    
+    .highlightFeatureSec .verticalSliderRow {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+    
+    .highlightFeatureSec .productCard {
+        padding: 30px 20px !important;
+    }
+    
+    .highlightFeatureSec .section-title h2 {
+        font-size: 2.5rem !important;
+    }
+}
+
+/* Additional visual effects */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particle 4s linear infinite;
+    z-index: 1;
+}
+
+@keyframes particle {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* Enhanced card variants */
+.highlightFeatureSec .productCard:nth-child(1) {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
+}
+
+.highlightFeatureSec .productCard:nth-child(2) {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.1) 100%) !important;
+}
+
+.highlightFeatureSec .productCard:nth-child(3) {
+    background: linear-gradient(135deg, rgba(255, 216, 155, 0.2) 0%, rgba(25, 84, 123, 0.1) 100%) !important;
+}
+
+/* Smooth transitions for all elements */
+* {
+    transition: all 0.3s ease !important;
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
