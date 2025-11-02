@@ -1,0 +1,26 @@
+{
+  "name": "sysarc-features",
+  "version": "1.0.0",
+  "description": "SAFE Locker Features Showcase - Ultra-enhanced interactive features page",
+  "main": "features-page.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "sysarc",
+    "safe-locker",
+    "features",
+    "interactive",
+    "glassmorphism",
+    "3d-effects"
+  ],
+  "author": "SysArc Infomatix",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harinivelraj/SysArc.git"
+  },
+  "homepage": "https://sysarcinfomatix.com"
+}
